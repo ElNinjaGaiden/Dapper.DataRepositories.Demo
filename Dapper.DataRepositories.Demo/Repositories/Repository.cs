@@ -1,8 +1,7 @@
-﻿using System;
+﻿using MicroOrm.Pocos.SqlGenerator;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Web;
 
 namespace Dapper.DataRepositories.Demo.Repositories
 {
@@ -29,7 +28,7 @@ namespace Dapper.DataRepositories.Demo.Repositories
         public IEnumerable<T> GetWhere<T>(object filters) where T : new()
         {
             //Creates the sql generator
-            var sqlGenerator = new MicroOrm.Pocos.SqlGenerator.SqlGenerator<T>();
+            var sqlGenerator = IoC.Instance.Resolve<ISqlGenerator<T>>();
 
             //Creates the query 
             var query = sqlGenerator.GetSelect(filters);
@@ -46,7 +45,7 @@ namespace Dapper.DataRepositories.Demo.Repositories
         public IEnumerable<T> GetAll<T>() where T : new()
         {
             //Creates the sql generator
-            var sqlGenerator = new MicroOrm.Pocos.SqlGenerator.SqlGenerator<T>();
+            var sqlGenerator = IoC.Instance.Resolve<ISqlGenerator<T>>();
 
             //Creates the query 
             var query = sqlGenerator.GetSelectAll();
@@ -64,7 +63,7 @@ namespace Dapper.DataRepositories.Demo.Repositories
         public T GetFirst<T>(object filters) where T : new()
         {
             //Creates the sql generator
-            var sqlGenerator = new MicroOrm.Pocos.SqlGenerator.SqlGenerator<T>();
+            var sqlGenerator = IoC.Instance.Resolve<ISqlGenerator<T>>();
 
             //Creates the query 
             var query = sqlGenerator.GetSelect(filters);

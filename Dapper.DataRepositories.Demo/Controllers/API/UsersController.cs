@@ -1,8 +1,6 @@
 ﻿using Dapper.DataRepositories.Demo.Models;
 using Dapper.DataRepositories.Demo.Repositories;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Web.Http;
 
 namespace Dapper.DataRepositories.Demo.Controllers.API
@@ -17,11 +15,9 @@ namespace Dapper.DataRepositories.Demo.Controllers.API
         /// <summary>
         /// 
         /// </summary>
-        public UsersController()
+        public UsersController(IRepository repository)
         {
-            var connString = ConfigurationManager.ConnectionStrings["DapperDemo"].ConnectionString;
-            var connnection = new SqlConnection(connString);
-            Repository = new Repository(connnection);
+            this.Repository = repository;
         }
 
         /// <summary>
