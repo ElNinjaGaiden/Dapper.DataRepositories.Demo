@@ -67,6 +67,15 @@ namespace Dapper.DataRepositories.Demo
         /// <summary>
         /// 
         /// </summary>
+        /// <returns></returns>
+        public ILifetimeScope BeginLifetimeScope()
+        {
+            return GetComponentsContainer().BeginLifetimeScope();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         private IoC()
         {
             _lock = new object();
@@ -88,7 +97,7 @@ namespace Dapper.DataRepositories.Demo
             this.RegisterType<SqlGenerator<User>>().As<ISqlGenerator<User>>().SingleInstance();
 
             //Repository
-            this.RegisterType<Repository>().As<IRepository>().SingleInstance();
+            this.RegisterType<Repository>().As<IRepository>().InstancePerLifetimeScope();
         }
     }
 }

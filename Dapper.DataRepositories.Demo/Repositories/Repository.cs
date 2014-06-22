@@ -71,5 +71,22 @@ namespace Dapper.DataRepositories.Demo.Repositories
             //Execute the query
             return Connection.Query<T>(query, filters).FirstOrDefault();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="instance"></param>
+        public void Add<T>(T instance) where T : new()
+        {
+            //Creates the sql generator
+            var sqlGenerator = IoC.Instance.Resolve<ISqlGenerator<T>>();
+
+            //Creates the query 
+            var query = sqlGenerator.GetInsert();
+
+            //Execute the query
+            Connection.Execute(query, instance);
+        }
     }
 }

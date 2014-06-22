@@ -26,5 +26,12 @@ namespace Dapper.DataRepositories.Demo.Repositories
         /// <param name="filters"></param>
         /// <returns></returns>
         T GetFirst<T>(object filters) where T : new();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="instance"></param>
+        void Add<T>(T instance) where T : new();
     }
 }
