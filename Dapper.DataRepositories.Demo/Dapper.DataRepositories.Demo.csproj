@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,14 +47,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Autofac.WebApi2.3.3.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Dapper">
-      <HintPath>..\packages\Dapper-Async.1.03\lib\net45\Dapper.dll</HintPath>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Dapper.DataRepositories">
-      <HintPath>..\packages\Dapper.DataRepositories.1.0.0.0\lib\net45\Dapper.DataRepositories.dll</HintPath>
+    <Reference Include="Dapper.DataRepositories, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.DataRepositories.1.0.0.3\lib\net45\Dapper.DataRepositories.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="MicroOrm.Pocos.SqlGenerator">
-      <HintPath>..\packages\MicroOrm.Pocos.SqlGenerator.1.0.0.0\lib\net45\MicroOrm.Pocos.SqlGenerator.dll</HintPath>
+    <Reference Include="MicroOrm.Pocos.SqlGenerator, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicroOrm.Pocos.SqlGenerator.1.0.0.5\lib\net45\MicroOrm.Pocos.SqlGenerator.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -226,7 +230,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

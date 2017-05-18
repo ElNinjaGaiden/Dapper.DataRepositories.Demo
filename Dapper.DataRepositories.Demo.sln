@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper.DataRepositories.Demo", "Dapper.DataRepositories.Demo\Dapper.DataRepositories.Demo.csproj", "{E1DA1F6F-236A-435D-82AD-E9E035817460}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper.DataRepositories.Demo.Tests", "Dapper.DataRepositories.Demo.Tests\Dapper.DataRepositories.Demo.Tests.csproj", "{301A01B8-5E7D-4A76-A258-33DA3E2064B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper.DataRepositories", "..\Dapper.DataRepositories\Dapper.DataRepositories\Dapper.DataRepositories.csproj", "{FCA98B9D-E9EB-497F-B581-1A0663816443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroOrm.Pocos.SqlGenerator", "..\MicroOrm.Pocos.SqlGenerator\MicroOrm.Pocos.SqlGenerator\MicroOrm.Pocos.SqlGenerator.csproj", "{37EFD853-CBFF-4B7F-9568-615747CA7237}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{301A01B8-5E7D-4A76-A258-33DA3E2064B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{301A01B8-5E7D-4A76-A258-33DA3E2064B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{301A01B8-5E7D-4A76-A258-33DA3E2064B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA98B9D-E9EB-497F-B581-1A0663816443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA98B9D-E9EB-497F-B581-1A0663816443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA98B9D-E9EB-497F-B581-1A0663816443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA98B9D-E9EB-497F-B581-1A0663816443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EFD853-CBFF-4B7F-9568-615747CA7237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EFD853-CBFF-4B7F-9568-615747CA7237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EFD853-CBFF-4B7F-9568-615747CA7237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EFD853-CBFF-4B7F-9568-615747CA7237}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
